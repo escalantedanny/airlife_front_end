@@ -1,0 +1,30 @@
+
+h1, h2, h3, p {
+    margin: 0;
+    line-height: 1.5;
+}
+h1, h2 {
+    margin-top: 10px;
+    color: #0884d2;
+}
+p {
+    text-align: justify;
+    texto-justify: inter-palabra;
+}
+h3 {
+    font-family: 'Signika', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.lether {
+    color: #0884d2;
+}
+#mapid { height: 180px; }
+
+.leaflet-container {
+    height: 280px;
+    width: 80%;
+}
