@@ -12,7 +12,9 @@ const CarText = () => {
         <Container>
             <Row>
                 <Col className="mb-1 mb-md-0" md="6">
-                    <Image className="card-lift--hover" alt="Certificaciones de la compañia" src={require("assets/images/cartapaboca.png")} />
+                    <CardImg
+                    alt="Certificaciones de la compañia" src={require("assets/images/cartapaboca.png")} 
+                    />
                 </Col>
                 <Col className="mb-1 mb-md-0 text-center text-md-justify" md="6">
                     <p>Dicha tecnología es la que aplicamos día a día en más de 13 países, con más de 20.000 soluciones instaladas, para entregar aire limpio, libre de olores, bacterias, hongos y virus en recintos públicos climatizados, en transportes de pasajeros, edificios de oficinas, restaurantes, centro comerciales, recintos de salud y automóviles particulares, entre otras aplicaciones.</p>
