@@ -15,7 +15,7 @@ const CarText = () => {
                     width="700" 
                     height="200"
                     align="center"
-                    alt="Certificaciones de la compañia" src={require("assets/images/cartapaboca.png")} 
+                    alt="Certificaciones de la compañia" src={require("assets/images/auto_tapaboca.png")} 
                     />
                 </Col>
                 <Col className="mb-1 mb-md-0 text-center text-md-justify" md="4">

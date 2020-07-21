@@ -29,7 +29,7 @@ const Nuestra = () => {
                         width="700" 
                         height="200"
                         align="center"
-                        alt="Certificaciones de la compañia" src={require("assets/images/infografia.png")} 
+                        alt="Certificaciones de la compañia" src={require("assets/images/infografia2.png")} 
                         />
                 </Col>
             </Row>

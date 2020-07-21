@@ -25,12 +25,11 @@ const Problem = () => {
             <Row className="align-items-center">
                 <Col className="text-center">
                     <img
-                        className="img-fluid"
                         width="auto" 
-                        height="800"
+                        height="1000"
                         align="center"
                         alt="..."
-                        src={require("assets/images/carddescarm.png")}
+                        src={require("assets/images/car3.png")}
                         />
                 </Col>
             </Row>
