@@ -12,7 +12,7 @@ const CarText = () => {
                 <Col className="mb-1 mb-md-0" md="6">
                     <img
                     className="img-fluid"
-                    width="700" 
+                    width="600" 
                     height="200"
                     align="center"
                     alt="Certificaciones de la compañia" src={require("assets/images/auto_tapaboca.png")} 
