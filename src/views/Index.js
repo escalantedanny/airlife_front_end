@@ -7,6 +7,7 @@ import Problem from "components/body/Problem";
 import Beneficios from "components/body/Beneficios";
 import Donde from "components/body/Donde";
 import Certificaciones from "components/body/Certificaciones";
+import Nuestra from "components/body/Nuestra";
 import Footer from  'components/Footers/Footer';
 
 
@@ -19,6 +20,7 @@ class Index extends React.Component {
           <img alt="Transporte Page" src={require("assets/img/banner/Banner.png")} />
         </main>
         <CartText />
+        <Nuestra />
         <Problem />
         <Beneficios />
         <Donde />

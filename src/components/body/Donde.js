@@ -1,6 +1,7 @@
 // @flow
 
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Pide from './Pide';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import axios from 'axios';
@@ -33,7 +34,9 @@ const Donde = () => {
   return ( 
     <>
       <Container>
-        <Row className="my-5"></Row>
+        <Row className="my-5">
+          <Pide />
+        </Row>
         <Row className="my-5">
             <Col className="mb-5 mb-md-0 text-center " md="12">
                 <h1 className="lether">¿Donde purificar tu auto?</h1>
