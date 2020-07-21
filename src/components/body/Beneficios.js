@@ -18,7 +18,7 @@ const Beneficios = () => {
                 </Row>
                 <Row className="mt-10">
                     <Col className="mb-5 mb-md-0" md="3">
-                        <Card className="card-lift--hover shadow border-0">
+                        <Card className="card-lift--hover border-0">
                                 <CardImg
                                 alt="..."
                                 src={require("assets/images/Beneficios/beneficio1.png")}
@@ -26,7 +26,7 @@ const Beneficios = () => {
                         </Card>
                     </Col>
                     <Col className="mb-5 mb-md-0" md="3">
-                        <Card className="card-lift--hover shadow border-0">
+                        <Card className="card-lift--hover border-0">
                                 <CardImg
                                 alt="..."
                                 src={require("assets/images/Beneficios/beneficio2.png")}
@@ -34,7 +34,7 @@ const Beneficios = () => {
                         </Card>
                     </Col>
                     <Col className="mb-5 mb-md-0" md="3">
-                        <Card className="card-lift--hover shadow border-0">
+                        <Card className="card-lift--hover border-0">
                                 <CardImg
                                 alt="..."
                                 src={require("assets/images/Beneficios/beneficio3.png")}
@@ -42,7 +42,7 @@ const Beneficios = () => {
                         </Card>
                     </Col>
                     <Col className="mb-5 mb-md-0" md="3">
-                        <Card className="card-lift--hover shadow border-0">
+                        <Card className="card-lift--hover border-0">
                                 <CardImg
                                 alt="..."
                                 src={require("assets/images/Beneficios/beneficio4.png")}

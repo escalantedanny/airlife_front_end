@@ -4,7 +4,6 @@ import {
     Col,
     Container
   } from "reactstrap";
-  import { Image } from 'react-bootstrap';
 
 const Nuestra = () => {
     return ( 

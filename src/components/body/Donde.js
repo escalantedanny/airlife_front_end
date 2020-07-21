@@ -39,7 +39,7 @@ const Donde = () => {
         </Row>
         <Row className="my-5">
             <Col className="mb-5 mb-md-0 text-center " md="12">
-                <h1 className="lether">¿Donde purificar tu auto?</h1>
+                <h1 className="lether">¿Donde purificar mi automovil?</h1>
             </Col>
         </Row>
         <Row className="my-5">

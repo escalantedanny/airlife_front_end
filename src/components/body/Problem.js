@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    CardImg,
     Container,
     Row,
     Col

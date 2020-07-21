@@ -14,18 +14,18 @@ class Footer extends React.Component {
       <>
         <footer className=" footer">
           <Container>
-            <Row className=" row-grid align-items-center mb-5">
+            <Row className="row-grid align-items-center mb-5">
               <Col lg="6">
                 <h4 className="lether mb-2">
                   AIRLIFE ESPAÑA Y PORTUGAL
                 </h4>
-                <h5 className=" mb-0 font-weight-light">
+                <h5 className="mb-0">
                   spain@airlife.com
                 </h5>
-                <h5 className=" mb-0 font-weight-light">
+                <h5 className="mb-0">
                   +34 91 654 5845
                 </h5>
-                <h5 className=" mb-0 font-weight-light">
+                <h5 className="mb-0">
                   Calle Estrasburgo 7, 28232 Madrid.
                 </h5>
               </Col>
@@ -90,7 +90,7 @@ class Footer extends React.Component {
             </Row>
             <hr />
             <Row className=" align-items-center justify-content-md-between">
-              <Col md="6">
+              <Col md="12" className="text-right">
                 <div className=" copyright">
                   © {new Date().getFullYear()}{" "}
                   <a
