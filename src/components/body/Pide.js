@@ -8,7 +8,7 @@ const Pide = () => {
     return ( 
         <>
                 <Row className="text-center mt-5 mb-5">
-                    <Col className="text-center">
+                    <Col className="text-center d-none d-sm-none d-md-block">
                         <img 
                             className="img-fluid"
                             width="auto" 

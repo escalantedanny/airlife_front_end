@@ -14,7 +14,7 @@ const Banner = () => {
                         height="450"
                         align="center"
                         alt="Certificaciones de la compañia" 
-                        src={require("assets/img/banner/Banner4.png")}  />
+                        src={require("assets/images/banner_final.png")}  />
         </>
      );
 }

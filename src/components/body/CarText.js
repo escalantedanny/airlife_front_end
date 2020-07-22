@@ -22,7 +22,7 @@ const CarText = () => {
                     <p>Tu automóvil, al ser un lugar donde pasar mucho tiempo, se transforma también en un gran foco de infecciones.</p>
                     <p>Airlife permite sanitizar el interior del automóvil, destruyendo molecularmente hasta un 99,9% de olores, hongos, virus y bacterias, sin elementos químicos y utilizando el oxígeno como elemento básico dejando el aire limpio y puro.</p>
                 </Col>
-                <Col md="2" className="text-right">
+                <Col md="2" className="text-center">
                 <img
                     className="img-fluid float-md-center"
                     width="180" 

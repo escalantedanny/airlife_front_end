@@ -8,7 +8,7 @@ import {
 const Problem = () => {
     return ( 
         <>
-            <Container className="mt-5">
+            <Container className="mt-5 mb-md-0 ">
                 <Row className="align-items-center justify-content-md-between" >
                     <Col className="mb-5 mb-md-0 text-center " md="12">
                         <h1 className="lether">Problema</h1>
@@ -20,18 +20,19 @@ const Problem = () => {
                         <p>Con nuestra tecnología limpia y eficiente, destruimos los microorganismos y olores de origen orgánico, sin camuflarlos y reduciendo los gérmenes sin necesidad de químicos, volviéndola una tecnología inofensiva para la salud y el medio ambiente.</p>
                     </Col>
                 </Row>
+                <Row className="text-center">
+                    <Col md="12" className="text-center">
+                        <img
+                            className="img-fluid"
+                            width="1000" 
+                            height="1000"
+                            align="center"
+                            alt="..."
+                            src={require("assets/images/AUTO_familiar.png")}
+                            />
+                    </Col>
+                </Row>
             </Container>
-            <Row className="align-items-center">
-                <Col className="text-center">
-                    <img
-                        width="auto" 
-                        height="1000"
-                        align="center"
-                        alt="..."
-                        src={require("assets/images/car3.png")}
-                        />
-                </Col>
-            </Row>
         </>
      );
 }

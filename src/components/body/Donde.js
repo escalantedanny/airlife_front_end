@@ -9,17 +9,14 @@ import {
   Row,
   Col,
   Container,
-  FormGroup,
   Label,
   Input
 } from "reactstrap";
 
 const Donde = () => {
 
-
   const [ cliente, guardarClientes ] = useState([]);
   
-
     const obtenerClientes = async () => {
       const url = 'https://www.descalante.com/api/espana/marca/TOYOTA';
 
@@ -28,8 +25,7 @@ const Donde = () => {
       guardarClientes(clie.data); 
     }
 
-    obtenerClientes();
-    
+    //obtenerClientes();
 
   return ( 
     <>
@@ -43,27 +39,17 @@ const Donde = () => {
             </Col>
         </Row>
         <Row className="my-5">
-          <Col className="mb-5 mb-md-0 text-center " md="9">
-          <Map center={[40.4165, -3.70256]} zoom={9}> 
-            <TileLayer 
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'/>
-          </Map>
-
-          </Col>
-          <Col className="mb-5 mb-md-0 text-center " md="3">
-            <Row>
-            <FormGroup row>
+          <Col className="text-center" md="10">
+            <Map center={[40.4165, -3.70256]} zoom={9}> 
+              <TileLayer 
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'/>
+            </Map>
               <Label for="tipo" sm={2}>Tipo</Label>
-              <Col sm={10}>
                 <Input type="select" name="select" id="tipo">
                   <option>Seleccione..!</option>
                   <option>Concesionario</option>
-                  <option>Lavado</option>
                 </Input>
-              </Col>
-            </FormGroup>
-            </Row>
           </Col>
         </Row>
       </Container>
