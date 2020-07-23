@@ -1,7 +1,7 @@
 import React from "react";
 
 // core components
-import Navbar from "components/Navbars/NavbarComponent.js";
+import Navbar from "components/Navbars/BurguerMenu.js";
 import CartText from "components/body/CarText";
 import Problem from "components/body/Problem";
 import Beneficios from "components/body/Beneficios";
@@ -14,10 +14,11 @@ import Footer from  'components/Footers/Footer';
 
 class Index extends React.Component {
   render() {
+
     return (
       <>
-        <Navbar />
         <main ref="main">
+          <Navbar />
           <Banner />
         </main>
         <CartText />

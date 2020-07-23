@@ -45,12 +45,6 @@ const NavbarComponent = () => {
             id="navbar-main"
           >
             <Container>
-              <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
-                <img
-                  alt="Transporte page"
-                  src={require("assets/img/iconos/Transport.png")}
-                />
-              </NavbarBrand>
               <UncontrolledCollapse
                 toggler="#navbar_global"
                 navbar
@@ -60,14 +54,6 @@ const NavbarComponent = () => {
               >
                 <div className="navbar-collapse-header">
                   <Row>
-                    <Col className="collapse-brand" xs="6">
-                      <Link to="/">
-                        <img
-                          alt="Transporte Page"
-                          src={require("assets/img/iconos/Transport.png")}
-                        />
-                      </Link>
-                    </Col>
                     <Col className="collapse-close" xs="6">
                       <button className="navbar-toggler" id="navbar_global">
                         <span />

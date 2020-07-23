@@ -8,13 +8,14 @@ import {
 const Banner = () => {
     return ( 
         <>
-                    <img 
-                        className="img-fluid"
-                        width="1900" 
-                        height="450"
-                        align="center"
-                        alt="Certificaciones de la compañia" 
-                        src={require("assets/images/banner_final.png")}  />
+          <img 
+            className="img-fluid"
+            width="1900" 
+            height="450"
+            align="center"
+            alt="Certificaciones de la compañia" 
+            src={require("assets/images/Banner.png")}  
+          />
         </>
      );
 }

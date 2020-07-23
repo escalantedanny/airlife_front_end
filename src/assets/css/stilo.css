@@ -1,7 +1,11 @@
 
+body h1, h2, h3, p{
+    font-family: 'Signika', sans-serif;
+    font-size: 36px;
+}
+
 h1, h2, h3, p {
     margin: 0;
-    line-height: 1.5;
 }
 h1, h2 {
     margin-top: 10px;
@@ -9,11 +13,7 @@ h1, h2 {
 }
 p {
     text-align: justify;
-    font-size: 80%;
     texto-justify: inter-palabra;
-}
-h3 {
-    font-family: 'Signika', sans-serif;
 }
 ul {
     list-style: none;
@@ -26,6 +26,77 @@ ul {
 #mapid { height: 180px; }
 
 .leaflet-container {
-    height: 280px;
-    width: 80%;
+    height: 330px;
+    width: 100%;
 }
+a {
+    display: block;
+    color: #ffffff;
+    padding: 25px 40px;
+    border-bottom: 0px solid rgba(112, 112, 112, .60);
+    font-weight: 300;
+    font-size: 18px;
+    transition: .4s ease color;
+    text-align: center;
+}
+.link-nosotros {
+    background: #ff9b26;
+}
+.link-nosotros:hover {
+    background: #fca747;
+}
+.link-certificaciones {
+    background: #6633C7;
+}
+.link-certificaciones:hover {
+    background: #7953c0;
+}
+.link-tecnologia {
+    background: #9BBE2A;
+}
+.link-tecnologia:hover {
+    background: #a7c250;
+}
+.link-business {
+    background: #325b9a;
+}
+.link-business:hover {
+    background: #4a6894;
+}
+.link-industrial {
+    background: #717070;
+}
+.link-industrial:hover {
+    background: #9b9797;
+}
+.link-health {
+    background: #c52b81;
+}
+.link-health:hover {
+    background: #be5c94;
+}
+.link-home{
+    background: #e3c33b;
+}
+.link-home:hover{
+    background: #e0cb6e;
+}
+.link-publicspaces {
+    background: #66ae8d;
+}
+.link-publicspaces:hover {
+    background: #84b19d;
+}
+.link-transport {
+    background: #00add8;
+}
+.link-transport:hover {
+    background: #43b9d6;
+}
+.link-contacto {
+    background: #bb2b36;
+}
+.link-contacto:hover {
+    background: #b44f57;
+}
+

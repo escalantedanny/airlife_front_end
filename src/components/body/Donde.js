@@ -10,7 +10,8 @@ import {
   Col,
   Container,
   Label,
-  Input
+  Input,
+  Button
 } from "reactstrap";
 
 const Donde = () => {
@@ -39,17 +40,44 @@ const Donde = () => {
             </Col>
         </Row>
         <Row className="my-5">
-          <Col className="text-center" md="10">
+          <Col className="text-center" md="12">
             <Map center={[40.4165, -3.70256]} zoom={9}> 
               <TileLayer 
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'/>
             </Map>
-              <Label for="tipo" sm={2}>Tipo</Label>
+          </Col>
+        </Row>
+        <Row className="">
+          <Col className="text-center" md="3">
                 <Input type="select" name="select" id="tipo">
-                  <option>Seleccione..!</option>
+                  <option>Seleccione Ciudad.!</option>
                   <option>Concesionario</option>
                 </Input>
+          </Col>
+          <Col className="text-center" md="3">
+                <Input type="select" name="select" id="tipo">
+                  <option>Seleccione Poblacion.!</option>
+                  <option>Concesionario</option>
+                </Input>
+          </Col>
+          <Col className="text-center" md="3">
+                <Input type="select" name="select" id="tipo">
+                  <option>Seleccione Marca.!</option>
+                  <option>Concesionario</option>
+                </Input>
+          </Col>
+          <Col className="text-center" md="3">
+                <Button 
+                  variant="primary" 
+                  color="twitter"
+                  type="input" 
+                  name="buscar" 
+                  id="buscar" 
+                  block
+                  >
+                    Buscar
+                </Button>
           </Col>
         </Row>
       </Container>
