@@ -63,7 +63,7 @@ const BurguerMenu = () => {
       >
         <a target="_blank" id="nosotros" className="menu-item link-nosotros" href="http://airlife.com/nosotros/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Empresa &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
         <a target="_blank" id="tecnologia" className="menu-item link-tecnologia" href="/">&nbsp;&nbsp;&nbsp;&nbsp;Tecnolog&iacute;a &nbsp;&nbsp;&nbsp;</a>
-        <a target="_blank" id="certificaciones" className="menu-item link-certificaciones" href="/about">Certificaciones</a>
+        <a target="_blank" id="certificaciones" className="menu-item link-certificaciones" href="/">Certificaciones</a>
         <a id="transporte" className="menu-item link-transport" href="/">&nbsp;&nbsp;&nbsp; Transporte &nbsp;&nbsp;&nbsp;</a>
         <a target="_blank" id="business" className="menu-item link-business" href="http://airlife.com/business/">&nbsp;&nbsp;&nbsp;&nbsp; Businesses&nbsp;&nbsp;</a>
         <a target="_blank" id="health" className="menu-item link-health" href="http://airlife.com/health/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Health&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
