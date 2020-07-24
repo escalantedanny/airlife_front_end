@@ -23,20 +23,16 @@ ul {
 .lether {
     color: #0884d2;
 }
-#mapid { height: 180px; }
-
 .leaflet-container {
-    height: 330px;
+    height: 450px;
     width: 100%;
 }
 a {
     font-family: 'Signika', sans-serif;
-    display: block;
     color: #ffffff;
-    padding: 25px 50px;
     border-bottom: 0px solid rgba(112, 112, 112, .60);
     font-weight: 300;
-    font-size: 18px;
+    font-size: 10px;
     transition: .4s ease color;
     text-align: left;
 }

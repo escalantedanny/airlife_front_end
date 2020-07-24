@@ -15,7 +15,7 @@ const Mapa = ({direcciones}) => {
     
 
     return ( 
-        <Map center={espana} zoom={9}>
+        <Map center={espana} zoom={12}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
@@ -37,9 +37,9 @@ const Mapa = ({direcciones}) => {
                         >
                             <div>
                                 <h6>Cliente: {activeAddress.cliente}</h6>
-                                <span>Población: {activeAddress.poblacion}</span>
-                                <span>Dirección: {activeAddress.direccion}</span>
-                                <span>Web: {activeAddress.website}</span>
+                                <div>Población: {activeAddress.poblacion}</div>
+                                <div>Dirección: {activeAddress.direccion}</div>
+                                <div>Web: <a href={activeAddress.website} target="_blank">{activeAddress.website}</a></div>
                             </div>
                         </Popup>
                     )}
