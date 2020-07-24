@@ -20,6 +20,7 @@ const Donde = () => {
   
     const obtenerClientes = async () => {
       const url = 'https://www.descalante.com/api/espana/marca/TOYOTA';
+      ///https://www.descalante.comapi/espana/search?marca=LEXUS&ciudad=Madrid&poblacion=Madrid
 
       const clie = await axios.get(url);
       console.log(clie.data);

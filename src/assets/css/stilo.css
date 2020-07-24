@@ -33,18 +33,21 @@ a {
     font-family: 'Signika', sans-serif;
     display: block;
     color: #ffffff;
-    padding: 25px 40px;
+    padding: 25px 50px;
     border-bottom: 0px solid rgba(112, 112, 112, .60);
     font-weight: 300;
     font-size: 18px;
     transition: .4s ease color;
-    text-align: center;
+    text-align: left;
+}
+a img{
+    padding: 0px 0px;
 }
 .link-nosotros {
-    background: #ff9b26;
+    background: #63ccf5;
 }
 .link-nosotros:hover {
-    background: #fca747;
+    background: #8ed5f1;
 }
 .link-certificaciones {
     background: #6633C7;
@@ -89,10 +92,10 @@ a {
     background: #84b19d;
 }
 .link-transport {
-    background: #00add8;
+    background: #3980AA;
 }
 .link-transport:hover {
-    background: #43b9d6;
+    background: #5786a1;
 }
 .link-contacto {
     background: #bb2b36;

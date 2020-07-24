@@ -21,8 +21,8 @@ const BurguerMenu = () => {
       background: '#transparent'
     },
     bmCrossButton: {
-      height: '24px',
-      width: '24px'
+      height: '36px',
+      width: '36px'
     },
     bmCross: {
       background: '#bdc3c7'
@@ -33,7 +33,7 @@ const BurguerMenu = () => {
     },
     bmMenu: {
       background: 'transparent',
-      padding: '1em 1em 0',
+      padding: '0em 0em 0',
       fontSize: '1.15em'
     },
     bmMorphShape: {
@@ -41,12 +41,13 @@ const BurguerMenu = () => {
     },
     bmItemList: {
       color: 'transparent',
-      padding: '0.8em'
+      textAlign: 'left',
+      padding: '10px 80px'
     },
     bmItem: {
       display: 'inline-block',
       color: 'white',
-      textAlign: 'center',
+      padding: '20px 80px',
       textDecoration: 'none'
     },
     bmOverlay: {
@@ -61,15 +62,48 @@ const BurguerMenu = () => {
         right
         styles={ styles } 
       >
-        <a target="_blank" id="nosotros" className="menu-item link-nosotros" href="http://airlife.com/nosotros/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Empresa &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <a target="_blank" id="tecnologia" className="menu-item link-tecnologia" href="/">&nbsp;&nbsp;&nbsp;&nbsp;Tecnolog&iacute;a &nbsp;&nbsp;&nbsp;</a>
-        <a target="_blank" id="certificaciones" className="menu-item link-certificaciones" href="/">Certificaciones</a>
-        <a id="transporte" className="menu-item link-transport" href="/">&nbsp;&nbsp;&nbsp; Transporte &nbsp;&nbsp;&nbsp;</a>
-        <a target="_blank" id="business" className="menu-item link-business" href="http://airlife.com/business/">&nbsp;&nbsp;&nbsp;&nbsp; Businesses&nbsp;&nbsp;</a>
-        <a target="_blank" id="health" className="menu-item link-health" href="http://airlife.com/health/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Health&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <a target="_blank" id="home" className="menu-item link-home" href="http://airlife.com/home/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <a target="_blank" id="publi_spaces" className="menu-item link-publicspaces" href="http://airlife.com/public_spaces/">&nbsp;&nbsp;Public spaces</a>
-        <a target="_blank" id="industrial" className="menu-item link-industrial" href="http://airlife.com/industrial/">&nbsp;&nbsp;&nbsp;&nbsp;Industrial &nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a target="_blank" id="nosotros"  align="left" className="menu-item link-nosotros" href="http://airlife.com/nosotros/">&nbsp;&nbsp;
+          <img 
+            width="55" 
+            height="60"
+            src={require("assets/images/iconos/iconos-Empresa.png")} 
+            alt="empresa"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        <a target="_blank" id="business" className="menu-item link-business" href="http://airlife.com/business/">&nbsp;&nbsp;
+          <img 
+            width="55" 
+            height="60"
+            src={require("assets/images/iconos/iconos-Business.png")} 
+            alt="business"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        <a target="_blank" id="health" className="menu-item link-health" href="http://airlife.com/health/">&nbsp;&nbsp;
+        <img 
+            width="55" 
+            height="60"
+            src={require("assets/images/iconos/iconos-Health.png")} 
+            alt="health"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        <a target="_blank" id="home" className="menu-item link-home" href="http://airlife.com/home/">&nbsp;&nbsp;
+        <img 
+            width="55" 
+            height="60"
+            src={require("assets/images/iconos/iconos-Home.png")} 
+            alt="Home"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        <a target="_blank" id="publi_spaces" className="menu-item link-publicspaces" href="http://airlife.com/public_spaces/">
+        <img 
+            width="80" 
+            height="60"
+            src={require("assets/images/iconos/iconos-Public spaces.png")} 
+            alt="empresa"/>
+        </a>
+        <a target="_blank" id="industrial" className="menu-item link-industrial" href="http://airlife.com/industrial/">
+        <img 
+            width="80" 
+            height="60"
+            src={require("assets/images/iconos/iconos-Industrial.png")} 
+            alt="Home"/>
+        </a>
 
       </Menu>
     );
