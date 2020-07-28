@@ -77,7 +77,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #525f7f;
+  color: #0884d2;
   text-align: left;
   background-color: #fff; }
 
@@ -409,7 +409,7 @@ mark,
 .blockquote-footer {
   display: block;
   font-size: 80%;
-  color: #8898aa; }
+  color: #0884d2; }
   .blockquote-footer::before {
     content: "\2014\00A0"; }
 
@@ -12316,11 +12316,9 @@ a.btn-icon-only {
   min-width: 450px;
   border-radius: 0.3rem; }
 
-.footer {
-  background: #f4f5f7;
-  padding: 1.5rem 0; }
+
   .footer .col-footer .heading {
-    color: #8898aa;
+    color: #0884d2;
     letter-spacing: 0;
     font-size: 0.875rem;
     text-transform: uppercase;
@@ -12328,7 +12326,7 @@ a.btn-icon-only {
     margin-bottom: 1rem; }
   .footer .nav .nav-item .nav-link,
   .footer .footer-link {
-    color: #8898aa !important; }
+    color: #0884d2 !important; }
     .footer .nav .nav-item .nav-link:hover,
     .footer .footer-link:hover {
       color: #525f7f !important; }

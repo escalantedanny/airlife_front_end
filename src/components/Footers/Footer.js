@@ -12,22 +12,23 @@ class Footer extends React.Component {
   render() {
     return (
       <>
-        <footer className=" footer">
-          <Container>
+        <footer className="footer-color">
+          <Container bg='blue'>
             <Row className="row-grid align-items-center mb-5">
-              <Col lg="6">
-                <h4 className="lether mb-2">
-                  AIRLIFE ESPAÑA Y PORTUGAL
+              <Col sm="6">
+                <h4 className="lether-footer mb-2">
+                  Airlife España
                 </h4>
-                <h5 className="mb-0">
-                  spain@airlife.com
-                </h5>
-                <h5 className="mb-0">
-                  +34 91 654 5845
-                </h5>
-                <h5 className="mb-0">
+                <p className="lether-footer mb-0">
+                  spain@airlife.com<br />
+                </p>
+                <p className="lether-footer mb-0">
+                  +34 91 325 6703 <br />
+                  +43 91 325 6705 
+                </p>
+                <span className="lether-footer mb-0">
                   Calle Estrasburgo 7, 28232 Madrid.
-                </h5>
+                </span>
               </Col>
               <Col className="text-lg-center btn-wrapper" lg="6">
                 <Button
@@ -88,7 +89,6 @@ class Footer extends React.Component {
                 </UncontrolledTooltip>
               </Col>
             </Row>
-            <hr />
             <Row className=" align-items-center justify-content-md-between">
               <Col md="12" className="text-right">
                 <div className=" copyright">

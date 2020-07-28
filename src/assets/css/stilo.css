@@ -1,15 +1,30 @@
-
-body h1, h2, h3, p{
-    font-family: 'Signika', sans-serif;
-    font-size: 36px;
+@font-face {
+font-family: "Oficina Sans ITC";
+src: url("../fonts/ITC\ -\ OfficinaSansITCStd-Bold.otf");
+}
+@font-face {
+    font-family: "Oficina Sans ITC Bold";
+    src: url("../fonts/ITC\ -\ OfficinaSansITCStd-Book.otf");
+    }
+* {
+    font-family: 'Oficina Sans ITC Bold', sans-serif;
 }
 
-h1, h2, h3, p {
+body {
+    font-family: 'Oficina Sans ITC', sans-serif;
+    font-size: 20rem;
+}
+h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
+
 h1, h2 {
     margin-top: 10px;
     color: #0884d2;
+}
+color-button{
+    color: #fff;
+    background: transparent;
 }
 p {
     text-align: justify;
@@ -21,23 +36,40 @@ ul {
     padding: 0;
 }
 .lether {
-    color: #0884d2;
+    color: #009bc8;
+    font-family: 'Oficina Sans ITC';
+}
+.lether-footer {
+    padding-top: 5px;
+    color: #fff;
+    font-family: 'Oficina Sans ITC';
+}
+.footer-color {
+    background: #009bc8;
+    background-color: #009bc8;
+}
+.color-button {
+    background: #009bc8;
+    background-color: #009bc8;
 }
 .leaflet-container {
     height: 450px;
     width: 100%;
 }
 a {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Oficina Sans ITC', sans-serif;
     color: #ffffff;
     border-bottom: 0px solid rgba(112, 112, 112, .60);
+    width: 220px;
+    height: 90px;
     font-weight: 300;
     font-size: 10px;
     transition: .4s ease color;
-    text-align: left;
+    float: left;
 }
 a img{
-    padding: 0px 0px;
+    float: left;
+    margin-left: 0em;
 }
 .link-nosotros {
     background: #63ccf5;

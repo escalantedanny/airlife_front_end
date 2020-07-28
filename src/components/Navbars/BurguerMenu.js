@@ -42,13 +42,15 @@ const BurguerMenu = () => {
     bmItemList: {
       color: 'transparent',
       textAlign: 'left',
-      padding: '10px 80px'
+      padding: '5px 60px',
+      float: 'left'
     },
     bmItem: {
-      display: 'inline-block',
+      display: 'block',
       color: 'white',
-      padding: '20px 80px',
-      textDecoration: 'none'
+      padding: '20px 70px',
+      textDecoration: 'none',
+      paddingLeft : '10px'
     },
     bmOverlay: {
       background: 'rgba(0, 0, 0, 0.3)'
@@ -78,14 +80,14 @@ const BurguerMenu = () => {
         </a>
         <a target="_blank" id="health" className="menu-item link-health" href="http://airlife.com/health/">&nbsp;&nbsp;
         <img 
-            width="55" 
+            width="45" 
             height="60"
             src={require("assets/images/iconos/iconos-Health.png")} 
             alt="health"/>&nbsp;&nbsp;&nbsp;&nbsp;
         </a>
         <a target="_blank" id="home" className="menu-item link-home" href="http://airlife.com/home/">&nbsp;&nbsp;
         <img 
-            width="55" 
+            width="45" 
             height="60"
             src={require("assets/images/iconos/iconos-Home.png")} 
             alt="Home"/>&nbsp;&nbsp;&nbsp;&nbsp;

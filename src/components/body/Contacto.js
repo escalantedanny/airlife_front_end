@@ -19,13 +19,20 @@ const Contacto = () => {
 
     return ( 
     <>
-        <Container className="my-5">
+        <Container className="my-5 mt-5">
             <Row className="mt-10">
-                <Col  className="mb-5 mb-md-0 text-center " md="12">
-                    <Button className="lether" onClick={handleShow}>
-                        ¡Contactanos!
+            <Col  className="text-center " md="4"></Col>
+                <Col  className="text-center " md="4">
+                    <Button 
+                        variant="primary" 
+                        color="twitter"
+                        onClick={handleShow} 
+                        size="lg" 
+                        block>
+                        <h3>¡Contactanos!</h3>
                     </Button>
                 </Col>
+                <Col  className="text-center " md="4"></Col>
             </Row>
         </Container>
 

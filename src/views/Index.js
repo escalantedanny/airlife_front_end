@@ -10,6 +10,7 @@ import Certificaciones from "components/body/Certificaciones";
 import Banner from "components/Navbars/Banner";
 import Nuestra from "components/body/Nuestra";
 import Footer from  'components/Footers/Footer';
+import Pide from  'components/body/Pide';
 
 
 class Index extends React.Component {
@@ -26,6 +27,7 @@ class Index extends React.Component {
         <Problem />
         <Beneficios />
         <Donde />
+        <Pide />
         <Certificaciones />
         <Footer />
       </>
