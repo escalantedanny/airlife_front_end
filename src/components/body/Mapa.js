@@ -54,7 +54,7 @@ const Mapa = ({direcciones}) => {
                                 <h6>Cliente: {address.cliente}</h6>
                                 <div>Población: {address.poblacion}</div>
                                 <div>Dirección: {address.direccion}</div>
-                                <div>Web: <a href={address.website} target="_blank">{address.website}</a></div>
+                                <div><a href={address.website} target="_blank">{address.website}</a></div><br />
                             </div>
                         </Popup>
                     </Marker>

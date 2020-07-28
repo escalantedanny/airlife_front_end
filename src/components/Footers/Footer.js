@@ -13,7 +13,7 @@ class Footer extends React.Component {
     return (
       <>
         <footer className="footer-color">
-          <Container bg='blue'>
+          <Container>
             <Row className="row-grid align-items-center mb-5">
               <Col sm="6">
                 <h4 className="lether-footer mb-2">
@@ -89,17 +89,15 @@ class Footer extends React.Component {
                 </UncontrolledTooltip>
               </Col>
             </Row>
-            <Row className=" align-items-center justify-content-md-between">
-              <Col md="12" className="text-right">
-                <div className=" copyright">
-                  © {new Date().getFullYear()}{" "}
+            <Row>
+              <Col md="12" className="text-left mb-2">
+                <div className="copyright">
                   <a
                     href="https://www.phantom.cl/"
                     target="_blank"
                   >
-                    Phantom
+                    © {new Date().getFullYear()}{" "} Phantom
                   </a>
-                  .
                 </div>
               </Col>
             </Row>
