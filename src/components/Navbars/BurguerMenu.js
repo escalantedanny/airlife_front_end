@@ -50,7 +50,9 @@ const BurguerMenu = () => {
       color: 'white',
       padding: '20px 70px',
       textDecoration: 'none',
-      paddingLeft : '10px'
+      paddingLeft : '10px',
+      height: '90px',
+      width: '220px'
     },
     bmOverlay: {
       background: 'rgba(0, 0, 0, 0.3)'
