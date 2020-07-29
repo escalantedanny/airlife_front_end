@@ -5,17 +5,12 @@ import { Icon, popup } from "leaflet";
 const Mapa = ({direcciones}) => {
 
     const [dirr, setAddress] = useState({
-        lati : [40.4167, -3.70325],
-        long : 6
+        latitud : '',
+        longitud : '',
+        flyTo: { 
+            zoom: 14, 
+            speed: 0.4 } 
     });
-
-    if(dirr){
-        console.log(dirr.latitud)
-        console.log(dirr.longitud)
-    }
-
-    //var espana = [40.4167, -3.70325];
-    //var zoom = 12;
 
     useEffect( () => {
 
@@ -33,9 +28,10 @@ const Mapa = ({direcciones}) => {
     return ( 
         <Map 
             center={
-                (!dirr) ? [40.463667, -3.74922] : ![dirr.latitud, dirr.longitud]
+                (dirr) ? [dirr.latitud, dirr.longitud] : [40.463667, -3.74922]
             } 
             zoom={(!dirr) ? 6 : 10}
+            movingMethod="flyTo"
         >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
