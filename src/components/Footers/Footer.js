@@ -91,14 +91,6 @@ class Footer extends React.Component {
             </Row>
             <Row>
               <Col md="12" className="text-left mb-2">
-                <div className="copyright">
-                  <a
-                    href="https://www.phantom.cl/"
-                    target="_blank"
-                  >
-                    © {new Date().getFullYear()}{" "} Phantom
-                  </a>
-                </div>
               </Col>
             </Row>
           </Container>
