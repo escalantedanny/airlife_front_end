@@ -26,11 +26,11 @@ const Problem = () => {
                     <Col md="12" className="text-center">
                         <img
                             className="img-fluid"
-                            width="1000" 
+                            width="900" 
                             height="1000"
                             align="center"
                             alt="..."
-                            src={require("assets/images/AUTO_familiar.png")}
+                            src={require("assets/images/carro_final.png")}
                             />
                     </Col>
                 </Row>

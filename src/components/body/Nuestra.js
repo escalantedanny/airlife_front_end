@@ -10,7 +10,9 @@ const Nuestra = () => {
         <>
         <Container>
             <Row className="mt-5 mb-5">
-                <Col className="mb-1 mb-md-0" md="6">
+                <Col className="mb-1 mb-md-0" md="8">
+                    <br />
+                    <br />
                     <Row className="align-items-center justify-content-md-between" >
                         <Col className="mb-5 mb-md-0 text-center " md="12">
                             <h1 className="lether">Nuestra Tecnolog&iacute;a</h1>
@@ -22,11 +24,10 @@ const Nuestra = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col className="mb-1 mb-md-0" md="6">
+                <Col className="mb-1 mb-md-0" md="4">
                     <img
-                        className="img-fluid"
-                        width="700" 
-                        height="200"
+                        width="570" 
+                        height="320"
                         align="center"
                         alt="Certificaciones de la compañia" src={require("assets/images/infografia2.png")} 
                         />

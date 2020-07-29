@@ -10,33 +10,27 @@ import {
     Form
   } from "reactstrap";
 
-const Contacto = () => {
-
+const Pide_contacto = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     return ( 
-    <>
-        <Container className="my-5 mt-5">
-            <Row className="mt-10">
-            <Col  className="text-center " md="4"></Col>
-                <Col  className="text-center " md="4">
-                    <img 
-                        onClick={handleShow}
-                        className="img-fluid"
-                        width="auto" 
-                        height="95"
-                        className="card-lift--hover" 
-                        alt="Certificaciones de la compañia" 
-                        src={require("assets/images/contactanos_button.png")} />
-                </Col>
-                <Col  className="text-center " md="4"></Col>
-            </Row>
-        </Container>
+        <>
+                <Row className="text-center mt-5 mb-5">
+                    <Col className="text-center d-none d-sm-none d-md-block">
+                        <img 
+                            onClick={handleShow}
+                            className="img-fluid"
+                            width="auto" 
+                            height="95"
+                            className="card-lift--hover" 
+                            alt="Certificaciones de la compañia" 
+                            src={require("assets/images/pide_contacto.png")} />
+                    </Col>
+                </Row>
 
-        <Modal show={show} onHide={handleClose}>
+                <Modal show={show} onHide={handleClose}>
             <Modal.Header>
                 <Modal.Title>Contacto</Modal.Title>
             </Modal.Header>
@@ -76,8 +70,8 @@ const Contacto = () => {
             </Button>
             </Modal.Footer>
         </Modal>
-    </>
+        </>
      );
 }
  
-export default Contacto;
+export default Pide_contacto;
