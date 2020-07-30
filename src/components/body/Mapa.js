@@ -9,7 +9,7 @@ const Mapa = ({direcciones}) => {
         longitud : '',
         flyTo: { 
             zoom: 14, 
-            speed: 0.4 } 
+            speed: 1.4 } 
     });
 
     useEffect( () => {

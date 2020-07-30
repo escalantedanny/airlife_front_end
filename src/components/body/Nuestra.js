@@ -26,7 +26,7 @@ const Nuestra = () => {
                 </Col>
                 <Col className="mb-1 mb-md-0" md="4">
                     <img
-                        width="570" 
+                        width="460" 
                         height="320"
                         align="center"
                         alt="Certificaciones de la compañia" src={require("assets/images/infografia2.png")} 
