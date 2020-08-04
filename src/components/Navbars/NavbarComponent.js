@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Headroom from "headroom.js";
 
 // reactstrap components
 import {
   Button,
   UncontrolledCollapse,
-  NavbarBrand,
   Navbar,
   NavItem,
   Nav,

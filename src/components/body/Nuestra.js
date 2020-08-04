@@ -10,7 +10,7 @@ const Nuestra = () => {
         <>
         <Container>
             <Row className="mt-5 mb-5">
-                <Col className="mb-1 mb-md-0" md="8">
+                <Col md="7">
                     <br />
                     <br />
                     <Row className="align-items-center justify-content-md-between" >
@@ -24,10 +24,11 @@ const Nuestra = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col className="mb-1 mb-md-0" md="4">
+                <Col md="5">
                     <img
-                        width="460" 
-                        height="320"
+                        className="img-fluid"
+                        width="490" 
+                        height="310"
                         align="center"
                         alt="Certificaciones de la compañia" src={require("assets/images/infografia2.png")} 
                         />

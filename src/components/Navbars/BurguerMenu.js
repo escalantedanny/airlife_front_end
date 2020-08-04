@@ -33,7 +33,7 @@ const BurguerMenu = () => {
     },
     bmMenu: {
       background: 'transparent',
-      padding: '0em 0em 0',
+      padding: '4em 0em 0',
       fontSize: '1.15em'
     },
     bmMorphShape: {

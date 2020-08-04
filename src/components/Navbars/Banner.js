@@ -1,22 +1,17 @@
 import React from 'react';
-import {
-    Row,
-    Col,
-    Container
-  } from "reactstrap";
+  var banner = (
+    <img 
+    className="img-fluid"
+      width="1900" 
+      height="650"
+      alt="Certificaciones de la compañia" 
+      src={require("assets/images/baner_final.png")}  
+    />
+  );
 
 const Banner = () => {
     return ( 
-        <>
-          <img 
-            className="img-fluid"
-            width="1900" 
-            height="450"
-            align="center"
-            alt="Certificaciones de la compañia" 
-            src={require("assets/images/baner_final.png")}  
-          />
-        </>
+      <div className="text-center">{ banner }</div>
      );
 }
  

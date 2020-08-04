@@ -46,12 +46,13 @@ ul {
     font-family: 'Oficina Sans ITC';
 }
 .footer-color {
-    background: #009bc8;
-    background-color: #009bc8;
+    background: #1D4A86;
+    background-color: #1D4A86;
 }
 .color-button {
     background: #009bc8;
     background-color: #009bc8;
+    border-radius: 10px;
 }
 .leaflet-container {
     height: 450px;

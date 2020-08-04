@@ -14,8 +14,9 @@ class Footer extends React.Component {
       <>
         <footer className="footer-color">
           <Container>
-            <Row className="row-grid align-items-center mb-5">
-              <Col sm="6">
+            <Row className="row-grid align-items-center mb-3">
+              <Col sm="6"> 
+              <br />
                 <h4 className="lether-footer mb-2">
                   Airlife España
                 </h4>

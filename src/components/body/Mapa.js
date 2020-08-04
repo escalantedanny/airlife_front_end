@@ -51,6 +51,7 @@ const Mapa = ({direcciones}) => {
                                 <div>Población: {address.poblacion}</div>
                                 <div>Dirección: {address.direccion}</div>
                                 <div><a href={address.website} target="_blank">{address.website}</a></div><br />
+                                <div><a href={`https://maps.google.com/?q=${address.latitud},${address.longitud}`} target="_blank"> Como llegar </a></div>
                             </div>
                         </Popup>
                     </Marker>
