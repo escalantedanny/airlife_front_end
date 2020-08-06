@@ -19,9 +19,9 @@ const Mapa = ({direcciones}) => {
     }, [direcciones])
 
     const icon = new Icon({
-        iconUrl: "./icon_map.jpeg",
-        iconSize: [25,41],
-        iconAnchor: [12.5, 41],
+        iconUrl: "./globoairlife.png",
+        iconSize: [36,36],
+        iconAnchor: [15, 41],
         popupAnchor: [0,41]
     })
 
@@ -42,6 +42,7 @@ const Mapa = ({direcciones}) => {
                     <Marker 
                         key = { address._id }
                         position={[address.latitud, address.longitud]} 
+                        icon = {icon}
                     >
                         <Popup
                             position={[address.latitud, address.longitud]} 
