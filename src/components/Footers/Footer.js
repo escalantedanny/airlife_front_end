@@ -33,20 +33,6 @@ class Footer extends React.Component {
               </Col>
               <Col className="text-lg-center btn-wrapper" lg="6">
                 <Button
-                  className="btn-icon-only rounded-circle"
-                  color="twitter"
-                  href="https://twitter.com/airlifeespana"
-                  id="tooltip475038074"
-                  target="_blank"
-                >
-                  <span className="btn-inner--icon">
-                    <i className="fa fa-twitter" />
-                  </span>
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip475038074">
-                  Follow us
-                </UncontrolledTooltip>
-                <Button
                   className="btn-icon-only rounded-circle ml-1"
                   color="facebook"
                   href="https://www.facebook.com/Airlife-Espa%C3%B1a-123209301679036/"
@@ -63,7 +49,7 @@ class Footer extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
                   color="instagram"
-                  href="https://www.instagram.com/airlifeespana/"
+                  href="https://www.instagram.com/airlife_internacional/v"
                   id="tooltip829810202"
                   target="_blank"
                 >
@@ -77,7 +63,7 @@ class Footer extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle ml-1 btn-linkedin"
                   color="facebook"
-                  href="https://www.linkedin.com/company/airlife-spain/?originalSubdomain=es"
+                  href="https://www.linkedin.com/company/airlife-chile-s.a."
                   id="tooltip495507257"
                   target="_blank"
                 >

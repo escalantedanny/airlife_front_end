@@ -16,8 +16,7 @@ const Donde = () => {
 
   const [ busqueda, guardarBusqueda ] = useState({
       ciudad : '',
-      marca : '',
-      poblacion : ''
+      marca : ''
   })
 
   const { buscarDirecciones, guardarConsulta, direcciones } = useContext(DireccionesContext);
@@ -33,8 +32,11 @@ const Donde = () => {
 
     const submitDirecciones = e => {
       e.preventDefault();
-      if(busqueda.ciudad === '' || busqueda.marca === '' || busqueda.poblacion === ''){
-          guardarError(true);
+      if( busqueda.ciudad === '' || busqueda.marca === ''){
+        guardarError(true);
+          setTimeout(() => {
+            guardarError(false);
+          }, 3000);
           return;
       }
       guardarError(false);
@@ -50,7 +52,7 @@ const Donde = () => {
         </Row>
         <Row className="my-5">
             <Col className="mb-5 mb-md-0 text-center " md="12">
-                <h1 className="lether">¿Donde purificar mi automovil?</h1>
+                <h1 className="lether">¿Donde higienizar mi coche?</h1>
             </Col>
         </Row>
         <Row className="my-5">
@@ -65,7 +67,7 @@ const Donde = () => {
             onSubmit={ submitDirecciones }
         >
           <Row className="">
-            <Col className="text-center" md="3">
+            <Col className="text-center" md="4">
                   <Input 
                     type="select" 
                     className="form-control"
@@ -73,7 +75,7 @@ const Donde = () => {
                     id="marca"
                     onChange={obtenerDatos}  
                   >
-                    <option value="">Seleccione Marca.!</option>
+                    <option value="">Seleccione Marca</option>
                     <option value="BOSCH">BOSCH</option>
                     <option value="CARSHARING">CARSHARING</option>
                     <option value="FIAT">FIAT</option>
@@ -88,7 +90,7 @@ const Donde = () => {
                     <option value="TOYOTA">TOYOTA</option>
                   </Input>
             </Col>
-            <Col className="text-center" md="3">
+            <Col className="text-center" md="4">
                   <Input 
                     type="select" 
                     className="form-control"
@@ -96,7 +98,7 @@ const Donde = () => {
                     id="ciudad"
                     onChange={obtenerDatos}
                   >
-                    <option value="">Seleccione Ciudad.!</option>
+                    <option value="">Seleccione Ciudad</option>
                     <option value="Alava">Alava</option>
                     <option value="Albacete">Albacete</option>
                     <option value="Alicante">Alicante</option>
@@ -211,63 +213,7 @@ const Donde = () => {
                     <option value="Zaragoza">Zaragoza</option>
                   </Input>
             </Col>
-            <Col className="text-center" md="3">
-                  <Input 
-                    type="select" 
-                    className="form-control"
-                    name="poblacion" 
-                    id="poblacion"
-                    onChange={obtenerDatos}
-                  >
-                    <option value="">Seleccione Poblaci&oacute;n.!</option>
-                    <option value="Adeje. Los Olivos">Adeje Los Olivos</option>
-                    <option value="Albacete">Albacete</option>
-                    <option value="Alcalá de Henares">Alcal&aacute; de Henares</option>
-                    <option value="Alcobendas">Alcobendas</option>
-                    <option value="Alcorcón">Alcorc&oacute;n</option>
-                    <option value="Alcoy">Alcoy</option>
-                    <option value="Algeciras">Algeciras</option>
-                    <option value="Algete">Algete</option>
-                    <option value="Alicante">Alicante</option>
-                    <option value="Almería">Almer&iacute;a</option>
-                    <option value="Aranjuez">Aranjuez</option>
-                    <option value="Arganda del Rey">Arganda del Rey</option>
-                    <option value="Ávila">&Aacute;vila</option>
-                    <option value="Badalona">Badalona</option>
-                    <option value="Barcelona">Barcelona</option>
-                    <option value="Bilbao">Bilbao</option>
-                    <option value="Blanes">Blanes</option>
-                    <option value="Boadilla del Monte">Boadilla del Monte</option>
-                    <option value="Burgos">Burgos</option>
-                    <option value="Carballo">Carballo</option>
-
-                    <option value="Cartagena">Cartagena</option>
-                    <option value="Cibrao">La Coru&ntilde;a</option>
-                    <option value="Las Palmas">Las Palmas</option>
-                    <option value="León">Le&oacute;n</option>
-                    <option value="Lisboa">Lisboa</option>
-                    <option value="Lugo">Lugo</option>
-                    <option value="Madrid">Madrid</option>
-                    <option value="Málaga">M&aacute;laga</option>
-                    <option value="Mallorca">Mallorca</option>
-                    <option value="Murcia">Murcia</option>
-                    <option value="Navarra">Navarra</option>
-                    <option value="Orense">Orense</option>
-                    <option value="Pontevedra">Pontevedra</option>
-                    <option value="La Rioja">La Rioja</option>
-                    <option value="S.C. Tenerife">S.C. Tenerife</option>
-                    <option value="Santander">Santander</option>
-                    <option value="Segovia">Segovia</option>
-                    <option value="Sevilla">Sevilla</option>
-                    <option value="Tarragona">Tarragona</option>
-                    <option value="Toledo">Toledo</option>
-                    <option value="Valencia">Valencia</option>
-                    <option value="Valladolid">Valladolid</option>
-                    <option value="Vizcaya">Vizcaya</option>
-                    <option value="Zaragoza">Zaragoza</option>
-                  </Input>
-            </Col>
-            <Col className="text-center" md="3">
+            <Col className="text-center" md="4">
                   <Button 
                     variant="primary" 
                     color="twitter"
@@ -281,7 +227,7 @@ const Donde = () => {
             </Col>
           </Row>
           <Row className="mt-3 mb-5">
-            <Col>
+            <Col className="text-center">
               { error ? <Error mensaje="Debe ingresar Marca y Ciudad"/> : null }
             </Col>
           </Row>

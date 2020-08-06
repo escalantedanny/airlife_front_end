@@ -27,10 +27,10 @@ const Contacto = () => {
                         onClick={handleShow}
                         className="img-fluid"
                         width="auto" 
-                        height="95"
+                        height="100"
                         className="card-lift--hover" 
                         alt="Certificaciones de la compañia" 
-                        src={require("assets/images/contactanos_button.png")} />
+                        src={require("assets/images/contactanos.png")} />
                 </Col>
                 <Col  className="text-center " md="4"></Col>
             </Row>

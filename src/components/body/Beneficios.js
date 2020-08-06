@@ -21,7 +21,7 @@ const Beneficios = () => {
                         <Card className="card-lift--hover border-0">
                                 <CardImg
                                 alt="..."
-                                src={require("assets/images/Beneficios/beneficio1.png")}
+                                src={require("assets/images/Beneficios/1_1.png")}
                                 />
                         </Card>
                     </Col>

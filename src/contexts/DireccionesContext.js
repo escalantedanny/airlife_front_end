@@ -12,19 +12,18 @@ const DireccionesProvider = (props) => {
 
     const [busqueda, buscarDirecciones] = useState({
         ciudad : '',
-        marca : '',
-        poblacion : ''
+        marca : ''
     });
 
     const [consultar, guardarConsulta] = useState(false);
 
-    const { ciudad, marca, poblacion } = busqueda;
+    const { ciudad, marca } = busqueda;
 
     useEffect( () => {
 
         if(consultar){
             const obtenerDirecciones = async () => {
-                const url = `https://www.descalante.com/api/espana/search?ciudad=${ciudad}&marca=${marca}&poblacion=${poblacion}`;
+                const url = `https://www.descalante.com/api/espana/search?ciudad=${ciudad}&marca=${marca}`;
                 const resultado = await axios.get(url);
                 guardarDirecciones(resultado.data);
                 
