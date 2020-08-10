@@ -35,7 +35,7 @@ class Footer extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
                   color="facebook"
-                  href="https://www.facebook.com/Airlife-Espa%C3%B1a-123209301679036/"
+                  href="https://www.facebook.com/Airlife_chile-103058711354409"
                   id="tooltip837440414"
                   target="_blank"
                 >
@@ -49,7 +49,7 @@ class Footer extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
                   color="instagram"
-                  href="https://www.instagram.com/airlife_internacional/v"
+                  href="https://www.instagram.com/airlife_internacional/"
                   id="tooltip829810202"
                   target="_blank"
                 >
