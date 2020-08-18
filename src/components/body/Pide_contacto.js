@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Modal, Button } from 'react-bootstrap';
+
+import { ContactoContext } from '../../contexts/ContactoContext';
 import {
     Row,
     Col,
@@ -10,10 +12,49 @@ import {
   } from "reactstrap";
 
 const Pide_contacto = () => {
-    const [show, setShow] = useState(false);
+    const { datosFormulario, guardarConsulta } = useContext(ContactoContext);
 
-    const handleClose = () => setShow(false);
+    const [usuario, guardarUsuario] = useState({
+        nombre : '',
+        email: '',
+        telefono: '',
+        observacion: ''
+    });
+
+    const { nombre, email, telefono, observacion } = usuario;
+
+    const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+
+    const verificar = e => {
+        guardarUsuario({
+            ...usuario,
+            [e.target.name] : e.target.value
+        })
+    }
+    
+
+    
+    const validarUsuario = () => {
+        if( usuario.nombre != '' && usuario.email != '' && usuario.telefono != '' && usuario.observacion != ''){
+            const user = {
+                name : usuario.nombre,
+                mail : usuario.email,
+                phone : usuario.telefono,
+                obser : usuario.observacion
+            }
+            datosFormulario(user);
+            setShow(false);
+            guardarConsulta(true);
+            usuario.nombre = ''; 
+            usuario.email = ''; 
+            usuario.telefono = ''; 
+            usuario.observacion = '';
+        } else {
+            return
+        }
+   }
     return ( 
         <>
                 <Row className="text-center mt-5 mb-5">
@@ -28,45 +69,69 @@ const Pide_contacto = () => {
                             src={require("assets/images/pide_contacto.png")} />
                     </Col>
                 </Row>
-
                 <Modal show={show} onHide={handleClose}>
             <Modal.Header>
                 <Modal.Title>Contacto</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Form className="formContacto">
+                <Form >
+                    { }
                     <Col>
                         <FormGroup row>
                             <Label for="name" sm={3}>Nombre</Label>
                             <Col sm={9}>
-                                <Input type="text" id="name" placeholder="Enter Name" />
+                                <Input 
+                                    type="text" 
+                                    id="nombre" 
+                                    name="nombre"
+                                    value={nombre}
+                                    onChange={verificar}
+                                />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
                             <Label for="email" sm={3}>Email</Label>
                                 <Col sm={9}>
-                                    <Input type="email" id="email" name="email" placeholder="Enter Email" />
+                                    <Input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email"
+                                        value={email}
+                                        onChange={verificar}
+                                    />
                                 </Col>
                         </FormGroup>
                         <FormGroup row>
                             <Label for="phone" sm={3}>Tel&eacute;fono</Label>
                             <Col sm={9}>
-                                <Input type="text" id="phone" placeholder="Telefono de contacto" />
+                                <Input 
+                                    type="text" 
+                                    id="telefono" 
+                                    name="telefono"
+                                    value={telefono}
+                                    onChange={verificar}
+                                />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
                             <Label for="comentario" sm={3}>Comentario</Label>
                             <Col sm={9}>
-                                <Input type="textarea" id="comentario" placeholder="Telefono de contacto" />
+                                <Input 
+                                    type="textarea" 
+                                    id="observacion" 
+                                    name="observacion"
+                                    onChange={verificar}
+                                    value={observacion}
+                                />
                             </Col>
                         </FormGroup>
                     </Col>
                 </Form>
             </Modal.Body>
             <Modal.Footer>
-            <Button variant="primary" onClick={handleClose}>
-                Enviar
-            </Button>
+                <Button variant="primary" onClick={validarUsuario}>
+                    Enviar
+                </Button>
             </Modal.Footer>
         </Modal>
         </>

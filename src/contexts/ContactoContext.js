@@ -17,10 +17,7 @@ const ContactoProvider = (props) => {
         if(consultar){
             const enviarFormulario = async () => {
                 const url = `https://www.airlife.es/api/espana/email`;
-                //const url = `http://localhost:4500/api/espana/email`;
                 const resultado = await axios.post(url, busqueda);
-                //guardarDirecciones(resultado.data);
-                
             }
             enviarFormulario();
         }
