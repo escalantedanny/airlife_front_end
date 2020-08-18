@@ -9,17 +9,20 @@ import "assets/scss/argon-design-system-react.scss?v1.1.0";
 import Index from "views/Index.js";
 
 import DireccionesContext from './contexts/DireccionesContext';
+import ContactoContext from './contexts/ContactoContext';
 
 function App() {
   return (
     <div id="App">
       <DireccionesContext>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact render={props => <Index {...props} />} />
-            <Redirect to="/" />
-          </Switch>
-        </BrowserRouter>
+        <ContactoContext>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/" exact render={props => <Index {...props} />} />
+              <Redirect to="/" />
+            </Switch>
+          </BrowserRouter>
+        </ContactoContext>
       </DireccionesContext>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { bubble as Menu } from 'react-burger-menu';
 
 const BurguerMenu = () => {
@@ -108,6 +108,7 @@ const BurguerMenu = () => {
             src={require("assets/images/iconos/iconos-Industrial.png")} 
             alt="Home"/>
         </a>
+        
 
       </Menu>
     );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-import { Icon, popup } from "leaflet";
+import { Icon } from "leaflet";
 
 const Mapa = ({direcciones}) => {
 
