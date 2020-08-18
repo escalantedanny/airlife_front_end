@@ -46,7 +46,7 @@ const Contacto = () => {
             obser : usuario.observacion
         }
         //datosFormulario(user);
-        validarUsuarioF(user);
+        //validarUsuarioF(user);
     }
 
     function validarUsuarioF(user){
