@@ -23,7 +23,7 @@ const DireccionesProvider = (props) => {
 
         if(consultar){
             const obtenerDirecciones = async () => {
-                const url = `https://www.descalante.com/api/espana/search?ciudad=${ciudad}&marca=${marca}`;
+                const url = `https://www.airlife.es/api/espana/search?ciudad=${ciudad}&marca=${marca}`;
                 const resultado = await axios.get(url);
                 guardarDirecciones(resultado.data);
                 
