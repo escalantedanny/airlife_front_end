@@ -61,21 +61,20 @@ const Contacto = () => {
             return
         }  
         
-        guardarEmail(false);
         let lastAtPos = usuario.email.lastIndexOf('@');
         let lastDotPos = usuario.email.lastIndexOf('.');
         if (!(lastAtPos < lastDotPos && lastAtPos > 0 && usuario.email.indexOf('@@') === -1 && lastDotPos > 2 && (usuario.email.length - lastDotPos) > 2)) {
             setEmail(true);
             return
-          } 
+        } 
+        guardarEmail(false);
         const user = {
             name : usuario.nombre,
             mail : usuario.email,
             phone : usuario.telefono,
             obser : usuario.observacion
         }
-        const su = datosFormulario(user);
-        console.log(su);
+        datosFormulario(user);
         guardarConsulta(true);
         
 
@@ -124,7 +123,7 @@ const Contacto = () => {
                     return MySwal.fire('<p>'+mensaje+'</p>')
                 });
             }
-        }, 2000);
+        }, 3000);
         usuario.nombre = ''; 
         usuario.email = ''; 
         usuario.telefono = ''; 
