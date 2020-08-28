@@ -26,8 +26,8 @@ const DireccionesProvider = (props) => {
 
         if(pobla){
             const obtenerPobla = async () => {
-                //const url = `http://localhost:4500/api/espana/clientxMark?marca=${pobla.marca}`;
-                const url = `https://www.airlife.es/api/espana/clientxMark?marca=${pobla.marca}`;
+                const url = `http://localhost:4500/api/espana/clientxMark?marca=${pobla.marca}`;
+                //const url = `https://www.airlife.es/api/espana/clientxMark?marca=${pobla.marca}`;
                 const resultado = await axios.get(url);
                 guardarPoblacion(resultado.data);
             }
@@ -43,8 +43,8 @@ const DireccionesProvider = (props) => {
 
         if(consultar){
             const obtenerDirecciones = async () => {
-                //const url = `http://localhost:4500/api/espana/search?ciudad=${ciudad}&marca=${marca}`;
-                const url = `https://www.airlife.es/api/espana/search?ciudad=${ciudad}&marca=${marca}`;
+                const url = `http://localhost:4500/api/espana/search?ciudad=${ciudad}&marca=${marca}`;
+                //const url = `https://www.airlife.es/api/espana/search?ciudad=${ciudad}&marca=${marca}`;
                 const resultado = await axios.get(url);
                 guardarDirecciones(resultado.data);
             }

@@ -8,6 +8,7 @@ export const ContactoContext = createContext();
 const ContactoProvider = (props) => {
 
     const [busqueda, datosFormulario] = useState({});
+    const [mensaje, setMensaje] = useState({});
 
     const [consultar, guardarConsulta] = useState(false);
 
@@ -16,8 +17,10 @@ const ContactoProvider = (props) => {
     useEffect( () => {
         if(consultar){
             const enviarFormulario = async () => {
-                const url = `https://www.airlife.es/api/espana/email`;
+                //const url = `https://www.airlife.es/api/espana/email`;
+                const url = `http://localhost:4500/api/espana/email`;
                 const resultado = await axios.post(url, busqueda);
+                setMensaje(resultado.data.msg);
             }
             enviarFormulario();
         }
@@ -27,7 +30,8 @@ const ContactoProvider = (props) => {
         <ContactoContext.Provider
             value={{
                 datosFormulario,
-                guardarConsulta
+                guardarConsulta,
+                mensaje
             }}
         >
             {props.children}

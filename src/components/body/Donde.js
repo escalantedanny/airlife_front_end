@@ -157,7 +157,7 @@ useEffect( () => {
                       <option value="">Seleccione Ciudad</option>
                     { poblaciones ?
                           newArr.map( pueblo => (
-                          <option value={pueblo}>{pueblo}</option>
+                          <option value={pueblo} key={pueblo}>{pueblo}</option>
                       ))
                       :
                       <option value="">Seleccione Ciudad</option>
