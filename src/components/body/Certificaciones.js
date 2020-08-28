@@ -23,7 +23,7 @@ const Certificaciones = () => {
                     <Image className="card-lift--hover" alt="Certificaciones de la compañia" src={require("assets/images/certificacion/4.png")} />
                     <Image className="card-lift--hover" alt="Certificaciones de la compañia" src={require("assets/images/certificacion/5.png")} />
                     <Image className="card-lift--hover" alt="Certificaciones de la compañia" src={require("assets/images/certificacion/6.png")} />
-                    <Image className="card-lift--hover" alt="Certificaciones de la compañia" src={require("assets/images/certificacion/7.png")} />
+                    <Image className="card-lift--hover" alt="Certificaciones de la compañixpa" src={require("assets/images/certificacion/7.png")} />
                     <Image className="card-lift--hover" alt="Certificaciones de la compañia" src={require("assets/images/certificacion/2.png")} />
                 </Col>
             </Row>
