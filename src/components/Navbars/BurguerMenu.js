@@ -66,42 +66,42 @@ const BurguerMenu = () => {
         right
         styles={ styles } 
       >
-        <a target="_blank" id="nosotros"  align="left" className="menu-item link-nosotros" href="http://airlife.com/nosotros/">&nbsp;&nbsp;
+        <a target="_blank"  rel="noopener noreferrer" id="nosotros"  align="left" className="menu-item link-nosotros" href="https://airlife.com/nosotros/">&nbsp;&nbsp;
           <img 
             width="51.55" 
             height="60"
             src={require("assets/images/iconos/iconos-Empresa.png")} 
             alt="empresa"/>&nbsp;&nbsp;&nbsp;&nbsp;
         </a>
-        <a target="_blank" id="business" className="menu-item link-business" href="http://airlife.com/business/">&nbsp;&nbsp;
+        <a target="_blank"  rel="noopener noreferrer" id="business" className="menu-item link-business" href="https://airlife.com/business/">&nbsp;&nbsp;
           <img 
             width="56.25" 
             height="60"
             src={require("assets/images/iconos/iconos-Business.png")} 
             alt="business"/>&nbsp;&nbsp;&nbsp;&nbsp;
         </a>
-        <a target="_blank" id="health" className="menu-item link-health" href="http://airlife.com/health/">&nbsp;&nbsp;
+        <a target="_blank"  rel="noopener noreferrer" id="health" className="menu-item link-health" href="https://airlife.com/health/">&nbsp;&nbsp;
         <img 
             width="41.35" 
             height="60"
             src={require("assets/images/iconos/iconos-Health.png")} 
             alt="health"/>&nbsp;&nbsp;&nbsp;&nbsp;
         </a>
-        <a target="_blank" id="home" className="menu-item link-home" href="http://airlife.com/home/">&nbsp;&nbsp;
+        <a target="_blank"  rel="noopener noreferrer" id="home" className="menu-item link-home" href="https://airlife.com/home/">&nbsp;&nbsp;
         <img 
             width="34.69" 
             height="60"
             src={require("assets/images/iconos/iconos-Home.png")} 
             alt="Home"/>&nbsp;&nbsp;&nbsp;&nbsp;
         </a>
-        <a target="_blank" id="publi_spaces" className="menu-item link-publicspaces" href="http://airlife.com/public_spaces/">
+        <a target="_blank"  rel="noopener noreferrer" id="publi_spaces" className="menu-item link-publicspaces" href="https://airlife.com/public_spaces/">
         <img 
             width="80.72" 
             height="60"
             src={require("assets/images/iconos/iconos-Public spaces.png")} 
             alt="empresa"/>
         </a>
-        <a target="_blank" id="industrial" className="menu-item link-industrial" href="http://airlife.com/industrial/">
+        <a target="_blank"  rel="noopener noreferrer" id="industrial" className="menu-item link-industrial" href="https://airlife.com/industrial/">
         <img 
             width="64.69" 
             height="60"

@@ -4,9 +4,7 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import Error from '../mensajes/Error';
 
-
 import { ContactoContext } from '../../contexts/ContactoContext';
-
 import {
     Container,
     Row,
@@ -14,8 +12,7 @@ import {
     FormGroup,
     Label,
     Input,
-    Form,
-    FormFeedback
+    Form
   } from "reactstrap";
 
 const Contacto = () => {
@@ -44,93 +41,98 @@ const Contacto = () => {
         })
     }
     
-    const validarUsuario = () => {
+    const validarUsuario = e => {
+        e.preventDefault();
 
-        if( usuario.nombre.trim() == ''){
+        if( usuario.nombre.trim() === ''){
             guardarEmail(true);
             return
         }
-        if( usuario.email.trim() == '' ){
+        if( usuario.email.trim() === '' ){
             guardarEmail(true);
             return
         }     
-        let lastAtPos = usuario.email.lastIndexOf('@');
-        let lastDotPos = usuario.email.lastIndexOf('.');
-        if (!(lastAtPos < lastDotPos && lastAtPos > 0 && usuario.email.indexOf('@@') == -1 && lastDotPos > 2 && (usuario.email.length - lastDotPos) > 2)) {
-            setEmail(true);
-            return
-          } 
-        if( usuario.telefono.trim() == ''){
+        if( usuario.telefono.trim() === ''){
             guardarEmail(true);
             return
         }   
-        if( usuario.observacion.trim() == ''){
+        if( usuario.observacion.trim() === ''){
             guardarEmail(true);
             return
         }  
         
+        guardarEmail(false);
+        let lastAtPos = usuario.email.lastIndexOf('@');
+        let lastDotPos = usuario.email.lastIndexOf('.');
+        if (!(lastAtPos < lastDotPos && lastAtPos > 0 && usuario.email.indexOf('@@') === -1 && lastDotPos > 2 && (usuario.email.length - lastDotPos) > 2)) {
+            setEmail(true);
+            return
+          } 
         const user = {
             name : usuario.nombre,
             mail : usuario.email,
             phone : usuario.telefono,
             obser : usuario.observacion
         }
-        datosFormulario(user);
+        const su = datosFormulario(user);
+        console.log(su);
         guardarConsulta(true);
-        guardarEmail(false);
-        setShow(false);
+        
 
         let timerInterval
-
         MySwal.fire({
         title: 'Enviado Información!',
         html: 'Cargando...',
-        timer: 2000,
+        timer: 3000,
         timerProgressBar: true,
         onBeforeOpen: () => {
-            MySwal.showLoading()
-            timerInterval = setInterval(() => {
-            const content = MySwal.getContent()
-            if (content) {
-                const b = content.querySelector('b')
-                if (b) {
-                b.textContent = MySwal.getTimerLeft()
+                MySwal.showLoading()
+                timerInterval = setInterval(() => {
+                const content = MySwal.getContent()
+                if (content) {
+                    const b = content.querySelector('b')
+                    if (b) {
+                    b.textContent = MySwal.getTimerLeft()
+                    }
                 }
-            }
             }, 100)
         },
         onClose: () => {
             clearInterval(timerInterval)
+            
         }
         }).then((result) => {
-        /* Read more about handling dismissals below */
         if (result.dismiss === Swal.DismissReason.timer) {
-            console.log('Finalizado')
+            console.log(mensaje)
         }
         })
-        
-    }
-    if(Object.entries(mensaje).length !== 0){
-        MySwal.fire({
-            title: <p>Enviado con Exito</p>,
-            footer: 'Copyright 2020',
-            showClass: {
-                popup: 'animate__animated animate__fadeInDown'
-              },
-              hideClass: {
-                popup: 'animate__animated animate__fadeOutUp'
-              },
-            onOpen: () => {
-            MySwal.clickConfirm()
+        setTimeout(() => {
+                if(Object.entries(mensaje).length !== 0 ){
+                    MySwal.fire({
+                        title: <p>Enviado con Exito</p>,
+                    footer: 'Copyright 2020',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    },
+                    onOpen: () => {
+                    MySwal.clickConfirm()
+                    }
+                }).then(() => {
+                    return MySwal.fire('<p>'+mensaje+'</p>')
+                });
             }
-        }).then(() => {
-            return MySwal.fire('<p>'+mensaje+'</p>')
-        });
+        }, 2000);
         usuario.nombre = ''; 
         usuario.email = ''; 
         usuario.telefono = ''; 
         usuario.observacion = '';
+        setShow(false);
     }
+
+    
 
     return ( 
         <>
@@ -140,10 +142,9 @@ const Contacto = () => {
                 <Col  className="text-center " md="4">
                     <img 
                         onClick={handleShow}
-                        className="img-fluid"
+                        className="img-fluid card-lift--hover"
                         width="auto" 
                         height="100"
-                        className="card-lift--hover" 
                         alt="Certificaciones de la compañia" 
                         src={require("assets/images/contactanos.png")} />
                 </Col>
@@ -157,6 +158,7 @@ const Contacto = () => {
             </Modal.Header>
             <Modal.Body>
                 <Form 
+                onSubmit={validarUsuario}
                 >
                     { mensajeEmail ? <Error mensaje="Todos los campos son requeridos" /> : '' }
                     { mensajeWrongEmail ? <Error mensaje="El campo Email no es Valido" /> : '' }

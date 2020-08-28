@@ -15,7 +15,6 @@ import {
   } from "reactstrap";
 
 const Pide_contacto = () => {
-    const { datosFormulario, guardarConsulta, mensaje } = useContext(ContactoContext);
 
     const [usuario, guardarUsuario] = useState({
         nombre : '',
@@ -25,8 +24,9 @@ const Pide_contacto = () => {
     });
 
     const { nombre, email, telefono, observacion } = usuario;
-
+    
     const MySwal = withReactContent(Swal);
+    const { datosFormulario, guardarConsulta, mensaje } = useContext(ContactoContext);
     const [show, setShow] = useState(false);
     const [ mensajeEmail, guardarEmail ] = useState(false);
     const [ mensajeWrongEmail, setEmail ] = useState(false);
@@ -40,33 +40,32 @@ const Pide_contacto = () => {
         })
     }
     
-
-    
     const validarUsuario = () => {
 
-        if( usuario.nombre.trim() == ''){
+        if( usuario.nombre.trim() === ''){
             guardarEmail(true);
             return
         }
-        if( usuario.email.trim() == '' ){
+        if( usuario.email.trim() === '' ){
             guardarEmail(true);
             return
         }     
-        let lastAtPos = usuario.email.lastIndexOf('@');
-        let lastDotPos = usuario.email.lastIndexOf('.');
-        if (!(lastAtPos < lastDotPos && lastAtPos > 0 && usuario.email.indexOf('@@') == -1 && lastDotPos > 2 && (usuario.email.length - lastDotPos) > 2)) {
-            setEmail(true);
-            return
-          } 
-        if( usuario.telefono.trim() == ''){
+        if( usuario.telefono.trim() === ''){
             guardarEmail(true);
             return
         }   
-        if( usuario.observacion.trim() == ''){
+        if( usuario.observacion.trim() === ''){
             guardarEmail(true);
             return
         }  
         
+        guardarEmail(false);
+        let lastAtPos = usuario.email.lastIndexOf('@');
+        let lastDotPos = usuario.email.lastIndexOf('.');
+        if (!(lastAtPos < lastDotPos && lastAtPos > 0 && usuario.email.indexOf('@@') === -1 && lastDotPos > 2 && (usuario.email.length - lastDotPos) > 2)) {
+            setEmail(true);
+            return
+          } 
         const user = {
             name : usuario.nombre,
             mail : usuario.email,
@@ -75,60 +74,62 @@ const Pide_contacto = () => {
         }
         datosFormulario(user);
         guardarConsulta(true);
-        guardarEmail(false);
-        setShow(false);
-
-        let timerInterval
-
-        MySwal.fire({
-        title: 'Enviado Información!',
-        html: 'Cargando...',
-        timer: 2000,
-        timerProgressBar: true,
-        onBeforeOpen: () => {
-            MySwal.showLoading()
-            timerInterval = setInterval(() => {
-            const content = MySwal.getContent()
-            if (content) {
-                const b = content.querySelector('b')
-                if (b) {
-                b.textContent = MySwal.getTimerLeft()
-                }
-            }
-            }, 100)
-        },
-        onClose: () => {
-            clearInterval(timerInterval)
-        }
-        }).then((result) => {
-        /* Read more about handling dismissals below */
-        if (result.dismiss === Swal.DismissReason.timer) {
-            console.log('Finalizado')
-        }
-        })
         
-    }
-    if(Object.entries(mensaje).length !== 0){
+        let timerInterval
+        
         MySwal.fire({
-            title: <p>Enviado con Exito</p>,
-            footer: 'Copyright 2020',
-            showClass: {
-                popup: 'animate__animated animate__fadeInDown'
-              },
-              hideClass: {
-                popup: 'animate__animated animate__fadeOutUp'
-              },
-            onOpen: () => {
-            MySwal.clickConfirm()
+            title: 'Enviado Información!',
+            html: 'Cargando...',
+            timer: 3000,
+            timerProgressBar: true,
+            onBeforeOpen: () => {
+                    MySwal.showLoading()
+                    timerInterval = setInterval(() => {
+                    const content = MySwal.getContent()
+                    if (content) {
+                        const b = content.querySelector('b')
+                        if (b) {
+                            b.textContent = MySwal.getTimerLeft()
+                        }
+                    }
+                }, 100)
+            },
+            onClose: () => {
+                clearInterval(timerInterval)
             }
-        }).then(() => {
-            return MySwal.fire('<p>'+mensaje+'</p>')
-        });
-        usuario.nombre = ''; 
-        usuario.email = ''; 
-        usuario.telefono = ''; 
-        usuario.observacion = '';
-    }
+        }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('Finalizado')
+            }
+        })
+        setTimeout(() => {
+            if(Object.entries(mensaje).length !== 0 ){
+                MySwal.fire({
+                    title: <p>Enviado con Exito</p>,
+                footer: 'Copyright 2020',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                },
+                onOpen: () => {
+                MySwal.clickConfirm()
+                }
+            }).then(() => {
+                return MySwal.fire('<p>'+mensaje+'</p>')
+            });
+        }
+    }, 2000);
+    usuario.nombre = ''; 
+    usuario.email = ''; 
+    usuario.telefono = ''; 
+    usuario.observacion = '';
+    setShow(false);
+}
+
+
 
     return ( 
         <>
@@ -136,10 +137,9 @@ const Pide_contacto = () => {
                     <Col className="text-center d-none d-sm-none d-md-block">
                         <img 
                             onClick={handleShow}
-                            className="img-fluid"
+                            className="img-fluid card-lift--hover"
                             width="auto" 
                             height="95"
-                            className="card-lift--hover" 
                             alt="Certificaciones de la compañia" 
                             src={require("assets/images/pide_contacto.png")} />
                     </Col>

@@ -12,18 +12,17 @@ const ContactoProvider = (props) => {
 
     const [consultar, guardarConsulta] = useState(false);
 
-    const { name, mail, phone, obser } = busqueda;
-
     useEffect( () => {
         if(consultar){
             const enviarFormulario = async () => {
-                const url = `https://www.airlife.es/api/espana/email`;
-                //const url = `http://localhost:4500/api/espana/email`;
+                //const url = `https://www.airlife.es/api/espana/email`;
+                const url = `http://localhost:4500/api/espana/email`;
                 const resultado = await axios.post(url, busqueda);
                 setMensaje(resultado.data.msg);
             }
             enviarFormulario();
         }
+        // eslint-disable-next-line
     }, [busqueda])
 
     return (
