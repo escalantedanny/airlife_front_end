@@ -30,7 +30,15 @@ const Pide_contacto = () => {
     const [show, setShow] = useState(false);
     const [ mensajeEmail, guardarEmail ] = useState(false);
     const [ mensajeWrongEmail, setEmail ] = useState(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+        usuario.nombre = ''; 
+        usuario.email = ''; 
+        usuario.telefono = ''; 
+        usuario.observacion = '';
+        guardarEmail(false);
+        setEmail(false);
+        setShow(true);
+    }
     const handleClose = () => setShow(false);
 
     const verificar = e => {
@@ -66,6 +74,7 @@ const Pide_contacto = () => {
             setEmail(true);
             return
           } 
+        setEmail(false);
         const user = {
             name : usuario.nombre,
             mail : usuario.email,

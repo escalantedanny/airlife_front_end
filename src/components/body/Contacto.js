@@ -31,8 +31,25 @@ const Contacto = () => {
     const [show, setShow] = useState(false);
     const [ mensajeEmail, guardarEmail ] = useState(false);
     const [ mensajeWrongEmail, setEmail ] = useState(false);
-    const handleShow = () => setShow(true);
-    const handleClose = () => setShow(false);
+
+    const handleShow = () => {
+        usuario.nombre = ''; 
+        usuario.email = ''; 
+        usuario.telefono = ''; 
+        usuario.observacion = '';
+        guardarEmail(false);
+        setEmail(false);
+        setShow(true);
+    }
+    const handleClose = () => {
+        usuario.nombre = ''; 
+        usuario.email = ''; 
+        usuario.telefono = ''; 
+        usuario.observacion = '';
+        guardarEmail(false);
+        setEmail(false);
+        setShow(false);
+    }
 
     const verificar = e => {
         guardarUsuario({
@@ -61,13 +78,13 @@ const Contacto = () => {
             return
         }  
         
+        guardarEmail(false);
         let lastAtPos = usuario.email.lastIndexOf('@');
         let lastDotPos = usuario.email.lastIndexOf('.');
         if (!(lastAtPos < lastDotPos && lastAtPos > 0 && usuario.email.indexOf('@@') === -1 && lastDotPos > 2 && (usuario.email.length - lastDotPos) > 2)) {
             setEmail(true);
             return
         } 
-        guardarEmail(false);
         const user = {
             name : usuario.nombre,
             mail : usuario.email,
