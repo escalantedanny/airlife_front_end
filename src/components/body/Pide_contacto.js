@@ -83,59 +83,27 @@ const Pide_contacto = () => {
         }
         datosFormulario(user);
         guardarConsulta(true);
-        
-        let timerInterval
-        
         MySwal.fire({
-            title: 'Enviado Información!',
-            html: 'Cargando...',
-            timer: 3000,
-            timerProgressBar: true,
-            onBeforeOpen: () => {
-                    MySwal.showLoading()
-                    timerInterval = setInterval(() => {
-                    const content = MySwal.getContent()
-                    if (content) {
-                        const b = content.querySelector('b')
-                        if (b) {
-                            b.textContent = MySwal.getTimerLeft()
-                        }
-                    }
-                }, 100)
+            title: <p>Enviado con Exito</p>,
+            footer: 'Copyright 2020',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
             },
-            onClose: () => {
-                clearInterval(timerInterval)
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            },
+            onOpen: () => {
+            MySwal.clickConfirm()
             }
-        }).then((result) => {
-            /* Read more about handling dismissals below */
-            if (result.dismiss === Swal.DismissReason.timer) {
-                console.log('Finalizado')
-            }
-        })
-        setTimeout(() => {
-            if(Object.entries(mensaje).length !== 0 ){
-                MySwal.fire({
-                    title: <p>Enviado con Exito</p>,
-                footer: 'Copyright 2020',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                },
-                onOpen: () => {
-                MySwal.clickConfirm()
-                }
-            }).then(() => {
-                return MySwal.fire('<p>'+mensaje+'</p>')
-            });
-        }
-    }, 2000);
-    usuario.nombre = ''; 
-    usuario.email = ''; 
-    usuario.telefono = ''; 
-    usuario.observacion = '';
-    setShow(false);
+        }).then(() => {
+            return MySwal.fire('<p>Enviado con Exito</p>')
+        });
+
+        usuario.nombre = ''; 
+        usuario.email = ''; 
+        usuario.telefono = ''; 
+        usuario.observacion = '';
+        setShow(false);
 }
 
 
