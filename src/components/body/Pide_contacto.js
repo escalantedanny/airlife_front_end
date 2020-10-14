@@ -26,7 +26,7 @@ const Pide_contacto = () => {
     const { nombre, email, telefono, observacion } = usuario;
     
     const MySwal = withReactContent(Swal);
-    const { datosFormulario, guardarConsulta, mensaje } = useContext(ContactoContext);
+    const { datosFormulario, guardarConsulta } = useContext(ContactoContext);
     const [show, setShow] = useState(false);
     const [ mensajeEmail, guardarEmail ] = useState(false);
     const [ mensajeWrongEmail, setEmail ] = useState(false);

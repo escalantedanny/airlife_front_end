@@ -8,22 +8,30 @@ import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
 import Index from "views/Index.js";
 
+import ListAddressContext from './contexts/ListAddressContext';
 import DireccionesContext from './contexts/DireccionesContext';
 import ContactoContext from './contexts/ContactoContext';
+
+import EditarCliente from './components/maintainer/EditarCliente';
+import ListAddressComponent from './components/maintainer/List';
 
 function App() {
   return (
     <div id="App">
-      <DireccionesContext>
-        <ContactoContext>
-          <BrowserRouter>
-            <Switch>
-              <Route path="/" exact render={props => <Index {...props} />} />
-              <Redirect to="/" />
-            </Switch>
-          </BrowserRouter>
-        </ContactoContext>
-      </DireccionesContext>
+      <ListAddressContext>
+        <DireccionesContext>
+          <ContactoContext>
+              <BrowserRouter>
+                <Switch>
+                  <Route path="/" exact render={props => <Index {...props} />} />
+                  <Route exact path="/listAddress" component={ListAddressComponent} />
+                  <Route exact path="/clientes/editar/:id" component={EditarCliente}/>
+                  <Redirect to="/" />
+                </Switch>
+              </BrowserRouter>
+          </ContactoContext>
+        </DireccionesContext>
+      </ListAddressContext>
     </div>
   );
 }
