@@ -23,8 +23,7 @@ class Footer extends React.Component {
                 <p className="lether-footer mb-0">
                   spain@airlife.com<br />
                 </p>
-                <p className="lether-footer mb-0">
-                  +34 91 325 6703 <br />
+                <p className="lether-footer mb-0">                  
                   +43 91 325 6705 
                 </p>
                 <span className="lether-footer mb-0">
@@ -35,7 +34,7 @@ class Footer extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
                   color="facebook"
-                  href="https://www.facebook.com/Airlife_chile-103058711354409"
+                  href="https://www.facebook.com/Airlife-Service-Europe-100736532131515/"
                   id="tooltip837440414"
                   target="_blank"
                 >
@@ -63,7 +62,7 @@ class Footer extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle ml-1 btn-linkedin"
                   color="facebook"
-                  href="https://www.linkedin.com/company/airlife-chile-s.a."
+                  href="https://www.linkedin.com/company/airlife-service-europe/?viewAsMember=true"
                   id="tooltip495507257"
                   target="_blank"
                 >
